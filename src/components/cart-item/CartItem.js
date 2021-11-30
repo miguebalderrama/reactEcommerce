@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Container,Image,Button} from "react-bootstrap";
+import {Container,Image} from "react-bootstrap";
 import { CartContext } from '../../context/CartContext';
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
