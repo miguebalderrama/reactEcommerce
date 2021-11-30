@@ -12,7 +12,6 @@ function ItemListContainer({className}) {
 
   const [isLoading, setIsLoading] = useState(true);
   const [selectFilter, setSelectFilter] = useState([]);
-  const [loading, setLoading]= useState(true);
   const [products, setProducts]= useState([]);
 
 useEffect(()=>  {
@@ -30,7 +29,7 @@ itemCollection.get().then(querySnapshot =>{
     ...document.data()
   })))
  
-}).catch(error=>console.log(error)).finally(()=>setLoading(false));
+}).catch(error=>console.log(error)).finally(()=>setIsLoading(false));
   
  } ,[]);
 
@@ -49,9 +48,13 @@ itemCollection.get().then(querySnapshot =>{
     return (
       <div>
          <Banner/>
+        {isLoading && <h3>is loading...</h3>}
+        {!isLoading && (
+        
         <Container className={className}>        
-        <ItemList products={selectFilter} isLoading={isLoading} loading={loading}/>
+        <ItemList products={selectFilter} isLoading={isLoading} />
         </Container>
+        )}
         </div>
     )
     }
