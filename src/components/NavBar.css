@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+.navbarme{
+    background-color:#ff3c3c;
+    color: white;
+   /* height: 62px ;*/
+}
+.nav-link{
+    font-family: 'Mulish', sans-serif;
+    color: white !important;
+    font-size: 14px;
+}
+
+.formMain{
+    margin-right: 50px;
+    max-width: 350px;
+    background-image: right no-repeat url("https://tiendamia.com/skin/frontend/traigo/traigo/images/vendors-searchbar/lupa.svg");
+}
+.lupa{
+    background-color: white;
+    cursor: pointer;
+    padding: 2px;
+    
+}
