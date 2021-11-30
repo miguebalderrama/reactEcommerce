@@ -1,5 +1,5 @@
 import React, {useContext,useState} from 'react'
-import { Form,Button, Container } from 'react-bootstrap'
+import { Form,Button, Container,Image } from 'react-bootstrap'
 import { CartContext } from '../../context/CartContext';
 import NumberFormat from 'react-number-format';
 import { getFirestore } from "../../firebase";
@@ -62,8 +62,9 @@ function CartForm() {
     return (
         <Container  >
 
-            <h4 style={{ textAlign: 'left'}}>Completá el formulario y nos pondremos en contacto a la brevedad</h4>
+            <h4 style={{ textAlign: 'left', marginLeft:"200px"}}>Completá el formulario y nos pondremos en contacto a la brevedad</h4>
             <h6 style={{ textAlign: 'rigth', marginBottom:'50px'}}>Total a comprar: <NumberFormat value={totalPrice()} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h6>
+       <div  style={{ display: 'flex'}}>
         <Form style={{ width: '300px' , margin: 'auto' }}>
   <Form.Group className="mb-3" >
    
@@ -84,6 +85,8 @@ function CartForm() {
     Enviar orden de compra
   </Button>
 </Form>
+<Image src={"https://cdn-icons-png.flaticon.com/512/2331/2331966.png"}  style={{ width: '400px'}} />
+</div>
 {orderCreatedId && <h3>Orden creada con exito: {orderCreatedId}</h3>}
 
 </Container>

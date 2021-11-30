@@ -19,7 +19,7 @@ function CartContainer() {
               </Button></Link> </div>}
               <h3>Precio Total: <NumberFormat value={totalPrice()} displayType={'text'} thousandSeparator={true} prefix={'$'} /> </h3>           
               <Link to="/cartForm">
-             <Button  variant="outline-primary">Ir a pagar</Button>
+             <Button style={{ width:"150px", marginTop:"100px" }} variant="primary">Ir a pagar</Button>
             </Link>
 
         </div>

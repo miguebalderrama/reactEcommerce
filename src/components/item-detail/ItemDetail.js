@@ -38,7 +38,7 @@ function ItemDetail({
   };
 
   return (
-    <Container style={{ display: 'flex', margin:"auto"}} >
+    <Container style={{ display: 'flex', marginLeft:"300px"}} >
       <div>
       <Card style={{ width: '25rem', height: '500px', marginTop:'20px' }}>
         <Card.Img  style={{ paddingTop: '100px'}} src={pictureUrl} />

@@ -12,7 +12,7 @@ function Cart({items}) {
 
    
     return (
-        <Container>
+        <Container style={{width:"60%"}}>
             {items.map(item => ( <CartItem {...item}   /> ) )}       
                       
             </Container>

@@ -39,7 +39,7 @@ itemCollection.get().then(querySnapshot =>{
       {isLoading && <h3>is loading...</h3>}
 
       {!isLoading && (
-        <ItemDetail
+        <ItemDetail 
           quantity={quantity}
           setQuantity={setQuantity}
           {...selectProduct.find((results) => results.id === numberId)}

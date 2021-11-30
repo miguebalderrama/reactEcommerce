@@ -1,6 +1,10 @@
 import React, {useContext} from 'react'
 import {Container,Image,Button} from "react-bootstrap";
 import { CartContext } from '../../context/CartContext';
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 
 function CartItem({id,title,pictureUrl,price,quantity}) {
     console.log(title);
@@ -13,7 +17,7 @@ function CartItem({id,title,pictureUrl,price,quantity}) {
         <div>${price}</div>
         <div>{quantity}</div>
         <div>
-        <Button onClick={()=>removeItem(id)} variant="outline-danger">Eliminar</Button>
+        <FontAwesomeIcon onClick={()=>removeItem(id)} style={{marginRight:"6px", color:"#797D7F", cursor:"pointer"}} icon={faTrashAlt} size="lg" />
         </div>
         </Container>
         
