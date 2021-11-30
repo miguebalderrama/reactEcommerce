@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "../item-count/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import NumberFormat from 'react-number-format';
+import { GlassMagnifier} from "react-image-magnifiers";
 
 
 function ItemDetail({
@@ -41,7 +42,17 @@ function ItemDetail({
     <Container style={{ display: 'flex', marginLeft:"300px"}} >
       <div>
       <Card style={{ width: '25rem', height: '500px', marginTop:'20px' }}>
-        <Card.Img  style={{ paddingTop: '100px'}} src={pictureUrl} />
+       
+        <div>
+        <GlassMagnifier style={{ marginTop: "120px"}}
+  imageSrc={pictureUrl}
+  imageAlt="Example"
+  largeImageSrc={pictureUrl} // Optional
+  magnifierSize="50%" // Optional
+/>
+ 
+
+        </div>
         </Card>
       </div>
       <div>
