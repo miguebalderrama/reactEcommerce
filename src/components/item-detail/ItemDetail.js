@@ -5,6 +5,8 @@ import ItemCount from "../item-count/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import NumberFormat from 'react-number-format';
 import { SideBySideMagnifier} from "react-image-magnifiers";
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function ItemDetail({
@@ -57,14 +59,23 @@ function ItemDetail({
         </Card>
       </div>
       <div>
-      <Card style={{ width: "18rem", marginTop: "20px",height: '500px',textAlign:'left' }}>
+      <Card style={{ width: "18rem", marginTop: "20px",height: '500px',textAlign:'left', backgroundColor:"#F1EFEF" }}>
         <Card.Body>
           <Card.Title style={{ fontSize: "2rem"}}>
-          {title}              
+          <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                     
           </Card.Title>
-          <Card.Text style={{ fontSize: "1.4rem", color:"#333333", marginTop:"15px"}} > <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+          <Card.Text style={{ fontSize: "1.4rem", color:"#333333", marginTop:"15px"}} > {title}   
           </Card.Text>
           <Card.Text>{description}</Card.Text>
+          <div style={{ display: "flex", color:"#08875b", marginBottom:"20px",backgroundColor:"white"}}>
+            <FontAwesomeIcon icon={faCreditCard} style={{ margin: "8px 10px 0 0"}} />
+            <span>Hasta 6 cuotas sin interés con tarjetas de crédito</span>
+            </div>
+          <div style={{ display: "flex"}}> 
+           
+            <img  alt="metodos de pago" src="https://tiendamia.com/skin/frontend/traigo/traigo/images/tarjetas-gris-ar.png"></img>
+            </div>
           {stateBuy === false && (
             <ItemCount 
               quantity={quantity}
@@ -81,7 +92,7 @@ function ItemDetail({
             {stateBuy === true && (
               <>
               <Link to="/cart">
-                <Button style={{ marginTop: "100px", width:"100%"}} variant="primary" fluid>Ir al carrito</Button>
+                <Button style={{ marginTop: "50px", width:"100%"}} variant="primary" fluid>Ir al carrito</Button>
               </Link>
               <Link to="/"> <Button style={{width:"100%"}} variant="primary" fluid>
               Seguir comprando
