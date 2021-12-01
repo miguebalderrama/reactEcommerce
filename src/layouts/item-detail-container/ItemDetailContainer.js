@@ -36,7 +36,7 @@ itemCollection.get().then(querySnapshot =>{
 
   return (
     <div>
-      {isLoading && <h3>is loading...</h3>}
+      {isLoading &&<div class="preloader"></div>}
 
       {!isLoading && (
         <ItemDetail 

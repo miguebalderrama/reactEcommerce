@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "../item-count/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import NumberFormat from 'react-number-format';
-import { GlassMagnifier} from "react-image-magnifiers";
+import { SideBySideMagnifier} from "react-image-magnifiers";
 
 
 function ItemDetail({
@@ -39,17 +39,18 @@ function ItemDetail({
   };
 
   return (
-    <Container style={{ display: 'flex', marginLeft:"300px"}} >
+    <Container className="itemDetail" style={{ display: 'flex', marginLeft:"300px"}} >
       <div>
-      <Card style={{ width: '25rem', height: '500px', marginTop:'20px' }}>
+      <Card style={{ width: '25rem', height: '500px', marginTop:'20px' }}>       
+      <div>
        
-        <div>
-        <GlassMagnifier style={{ marginTop: "120px"}}
+  <SideBySideMagnifier style={{ marginTop: "120px"}} 
   imageSrc={pictureUrl}
   imageAlt="Example"
-  largeImageSrc={pictureUrl} // Optional
-  magnifierSize="50%" // Optional
-/>
+  largeImageSrc={pictureUrl}
+  alwaysInPlace="true"
+  />
+
  
 
         </div>
@@ -61,7 +62,7 @@ function ItemDetail({
           <Card.Title style={{ fontSize: "2rem"}}>
           {title}              
           </Card.Title>
-          <Card.Text style={{ fontSize: "1.4rem", color:"grey", marginTop:"15px"}} > <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+          <Card.Text style={{ fontSize: "1.4rem", color:"#333333", marginTop:"15px"}} > <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
           </Card.Text>
           <Card.Text>{description}</Card.Text>
           {stateBuy === false && (

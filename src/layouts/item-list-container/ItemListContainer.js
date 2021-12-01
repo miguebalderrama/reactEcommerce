@@ -48,7 +48,8 @@ itemCollection.get().then(querySnapshot =>{
     return (
       <div>
          <Banner/>
-        {isLoading && <h3>is loading...</h3>}
+        {isLoading && <div class="preloader"></div>
+}
         {!isLoading && (
         
         <Container className={className}>        
