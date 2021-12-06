@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Form, Button, Container, Image } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import { CartContext } from '../../context/CartContext';
 import { UserContext } from '../../context/UserContext';
 import NumberFormat from 'react-number-format';
