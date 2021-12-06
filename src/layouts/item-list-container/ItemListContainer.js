@@ -8,6 +8,7 @@ import { getFirestore } from "../../firebase";
 import Banner from "../../components/banner/Banner";
 
 
+
 function ItemListContainer({className}) {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -47,8 +48,9 @@ itemCollection.get().then(querySnapshot =>{
     }, [categoryId, products]);
     return (
       <div>
+        
          <Banner/>
-        {isLoading && <div class="preloader"></div>
+        {isLoading && <div className="preloader"></div>
 }
         {!isLoading && (
         

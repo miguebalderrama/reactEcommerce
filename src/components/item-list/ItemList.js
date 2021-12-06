@@ -9,7 +9,7 @@ function ItemList({products}) {
         <div className="item-list">         
           {products.map(({id, title, pictureUrl,price})=>(
              <Link to={`/item/${id}`}>
-              <Item price={price} title={title} url={pictureUrl}/>
+              <Item key={id} price={price} title={title} url={pictureUrl}/>
               </Link>
           )
           )}

@@ -4,6 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap'
 import NumberFormat from 'react-number-format';
+import CartForm from '../../components/cartform/CartForm';
 
 
 function CartContainer() {
@@ -21,6 +22,7 @@ function CartContainer() {
               <Link to="/cartForm">
              <Button style={{ width:"150px", marginTop:"100px" }} variant="primary">Ir a pagar</Button>
             </Link>
+            
 
         </div>
     )

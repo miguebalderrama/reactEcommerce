@@ -9,6 +9,7 @@ import "./NavBar.css";
 import CartWidget from "./cartwidget/CartWidget";
 import { faHeart,faStream } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FormAuth from "./form-auth/FormAuth";
 
 function NavBar() {
   return (
@@ -68,6 +69,7 @@ function NavBar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse> 
+        <FormAuth/>
         <Link to="/cart">
         <CartWidget classCount="cart-count" cartCount="3" tittleCart="Carrito" className="card-widget" />
         </Link>      

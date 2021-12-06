@@ -18,8 +18,8 @@ function CartWidget({classCount,cartCount,className,tittleCart}) {
   }}, [totalQuantity]);
   return (
       <>
-     <div className={stateDisplay} > 
-    <Image className={className} title={tittleCart}
+     <div style={{ marginLeft:"10px", marginBottom:"10px"}} className={stateDisplay} > 
+    <Image  className={className} title={tittleCart}
       src="https://tiendamia.com/skin/frontend/traigo/traigo/images/svg/carrito_header.svg"
       rounded
     />
